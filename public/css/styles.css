@@ -4,3 +4,378 @@
 *:after {
   box-sizing: border-box;
 }
+
+/* Mobile-first styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: white;
+    color: #333; /* Changed from white to a darker color for readability */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 1rem; /* Add space below the header */
+}
+
+header h1 {
+    margin: 0;
+}
+
+header .account {
+    margin-left: auto;
+    font-size: 0.9rem;
+}
+
+#top-header {
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#top-header .siteName a {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+#top-header #tools a {
+  font-size: 1.25rem; 
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+#top-header #tools a:hover {
+  color: #e6b800;
+}
+
+nav {
+    margin-top: 1rem; /* Add space above the navigation */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: blue;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    background-color: white;
+    position: relative;
+}
+
+.hero-text {
+    margin-bottom: 1rem;
+    position: absolute;
+    top: 40%; /* Adjusted to lower the hero text */
+    left: 10%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.7);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+}
+
+.details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px; 
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+.upgrades, .reviews {
+    width: 48%;
+    text-align: left; 
+    margin-bottom: 0;
+}
+
+.upgrade-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.upgrade {
+    text-align: center;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.upgrade img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.upgrade a {
+    color: #333; 
+    text-decoration: none;
+    font-weight: bold; 
+    font-size: 1rem;
+}
+
+.upgrade a:hover {
+    color: #ffcc00;
+}
+
+.reviews ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.reviews li {
+    margin-bottom: 15px;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.vehicle-detail {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.vehicle-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center; /* Center the content vertically */
+}
+
+.vehicle-container img {
+    max-width: 60%; /* Keep the image larger */
+    height: auto;
+    flex: 1 1 60%; /* Adjust to make the image take up more space */
+    border-radius: 10px; /* Slight rounded corners for the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow to make it stand out */
+}
+
+.vehicle-info {
+    flex: 1 1 40%; /* Adjust to make the text take up the remaining space */
+    text-align: left; /* Align text to the left */
+    padding: 20px;
+    background-color: #fff; /* White background for a clean look */
+    border-radius: 10px; /* Rounded corners for the info card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease; /* Add a hover effect */
+}
+
+.vehicle-info:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.vehicle-info h2 {
+    font-size: 2rem; /* Larger title for the car name */
+    margin-bottom: 10px;
+    color: #333; /* Dark color for the title */
+    font-weight: bold;
+}
+
+.vehicle-info .price {
+    font-size: 1.5rem;
+    color: #ff6600; /* Bold, eye-catching color for the price */
+    margin-bottom: 15px;
+}
+
+.vehicle-info .details {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.vehicle-info .details span {
+    font-weight: bold; /* Highlight the labels */
+    color: #333; /* Darker color for labels */
+}
+
+.vehicle-info .cta-button {
+    display: inline-block;
+    background-color: #ff6600;
+    color: white;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.vehicle-info .cta-button:hover {
+    background-color: #e65c00; /* Darker shade on hover */
+}
+
+@media (max-width: 768px) {
+    .vehicle-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .vehicle-container img {
+        max-width: 100%; /* Make image full-width on small screens */
+    }
+
+    .vehicle-info {
+        text-align: center; /* Center the text on small screens */
+    }
+
+    .vehicle-info .cta-button {
+        width: auto; /* Adjust button width for small screens */
+    }
+}
+
+/******* Login Page Styles *********/
+
+.login-section {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-section h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+form button {
+    padding: 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+p {
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+p a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+.flash-messages {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #f5c6cb;
+}
+
+.flash-messages p {
+    margin: 0;
+}
+
+/* Error page styles */
+.error-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.error-container h2 {
+    font-size: 2.5rem;
+    color: #ff4500;
+    margin-bottom: 20px;
+}
+
+.error-message {
+    font-size: 1.5rem;
+    color: #ff6347;
+    margin-bottom: 20px;
+}
+
+.error-container a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff4500;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.25rem;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.error-container a:hover {
+    background-color: #e63e00;
+}
